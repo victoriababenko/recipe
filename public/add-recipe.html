@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Додати рецепт</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="container header-flex">
+      <h1 class="site-title">Особливі рецепти</h1>
+      <nav class="main-nav" id="nav-menu">
+        <a href="index.html">Головна</a>
+        <a href="recipes.html">Рецепти</a>
+        <a href="add-recipe.html">Додати рецепт</a>
+        <a href="login.html" id="login-link">Вхід</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- 🔽 Контейнер для повідомлення про авторизацію -->
+    <div id="auth-check-container"></div>
+
+    <!-- 🔽 Форма додавання рецепту (прихована, поки не авторизовано) -->
+    <form id="add-recipe-form" enctype="multipart/form-data" style="display:none;">
+      <input type="text" id="title" placeholder="Назва рецепту" required>
+      <textarea id="ingredients" placeholder="Інгредієнти" required></textarea>
+      <textarea id="instructions" placeholder="Інструкції приготування" required></textarea>
+      <input type="text" id="restrictions" placeholder="Харчові обмеження (через кому)">
+      <input type="file" id="image" accept="image/*">
+      <button type="submit">Додати рецепт</button>
+    </form>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2025 Особливі рецепти
+    </div>
+  </footer>
+
+  <!-- 🔽 Основний скрипт -->
+  <script src="js/script.js"></script>
+
+  <!-- 🔽 Ініціалізація після завантаження -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderUserNav();
+      const allowed = checkAuthRender('auth-check-container');
+      if (allowed) {
+        document.getElementById('add-recipe-form').style.display = 'block';
+        handleAddRecipe();
+      }
+    });
+  </script>
+</body>
+
+</html>

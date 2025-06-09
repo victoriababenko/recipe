@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Рецепти для людей з особливими харчовими потребами</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="container header-flex">
+      <h1 class="site-title">Особливі рецепти</h1>
+      <nav class="main-nav" id="nav-menu">
+        <a href="index.html">Головна</a>
+        <a href="recipes.html">Рецепти</a>
+        <a href="add-recipe.html">Додати рецепт</a>
+        <a href="login.html" id="login-link">Вхід</a>
+        
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="container">
+    <section class="search-section">
+      <input type="text" id="search-input" placeholder="Пошук рецептів...">
+      <button onclick="searchRecipes()">Шукати</button>
+    </section>
+
+    <section class="recipes-section">
+      <h2>Популярні рецепти</h2>
+      <div id="recipes-list">
+        <!-- JS завантажить рецепти -->
+      </div>
+    </section>
+
+    <section id="news-section">
+      <h2>Останні новини</h2>
+      <div class="news-grid" id="news-list">
+        <!-- новини завантажуються динамічно -->
+      </div>
+    </section>
+    
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2025 Особливі рецепти
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderUserNav(); // ⬅️ викликаємо функцію після завантаження сторінки
+    });
+  </script>
+  
+</body>
+
+</html>

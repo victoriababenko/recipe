@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Новина</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="container header-flex">
+      <h1 class="site-title">Новина</h1>
+      <nav class="main-nav" id="nav-menu">
+        <a href="index.html">Головна</a>
+        <a href="recipes.html">Рецепти</a>
+        <a href="add-recipe.html">Додати рецепт</a>
+        <a href="login.html" id="login-link">Вхід</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="news-detail">
+    <!-- Контент новини буде завантажено JS -->
+  </main>
+
+  <footer>
+    <div class="container">© 2025 Особливі рецепти</div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderUserNav(); // ⬅️ викликаємо функцію після завантаження сторінки
+    });
+  </script>
+  
+</body>
+</html>

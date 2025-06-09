@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Реєстрація</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="container">
+    <form id="register-form">
+      <h2>Реєстрація</h2>
+      <input type="text" name="username" placeholder="Логін" required>
+<input type="password" name="password" placeholder="Пароль" required>
+      <button type="submit">Зареєструватися</button>
+      <p>Вже є акаунт? <a href="login.html">Вхід</a></p>
+    </form>
+  </main>
+  <script src="js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderUserNav(); // ⬅️ викликаємо функцію після завантаження сторінки
+    });
+  </script>
+  
+</body>
+</html>
